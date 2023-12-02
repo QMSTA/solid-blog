@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --theme-default-color: #369;
+    }
+
+    ::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+        background-color: #f5f5f5;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #c1c1c1;
+    }
+}
+
+
+@layer components {
+    .transition300 {
+        @apply transition-all duration-300 ease-in-out
+    }
+
+    .submenu {
+        @apply transition-all duration-300 ease-out opacity-0 hidden overflow-hidden bg-[#000c17]
+    }
+
+    .menuitem {
+        @apply mx-1 mt-1 pl-6 pr-9 rounded-[8px] text-[#ffffffa6]
+        hover:text-white relative z-10 h-10 flex flex-row items-center cursor-pointer select-none
+        transition300
+    }
+
+    .menusubitem {
+        @apply menuitem pl-[38px]
+    }
+
+}
+
+@layer utilities {
+    .scrolled {
+        color: var(--theme-default-color);
+        background: white;
+        border-bottom: 1px solid #e9ecef;
+    }
+
+    .scrolled .item {
+        @apply text-tdc hover:text-white
+    }
+
+    .scrolled .logo {
+        @apply text-tdc
+    }
+
+
+    .submenu.expand {
+        @apply opacity-100
+    }
+
+    .menuitem.selected {
+        background: #738091;
+        color: white;
+    }
+}
