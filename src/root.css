@@ -38,6 +38,31 @@
         @apply menuitem pl-[38px]
     }
 
+    .editer {
+        @apply h-full outline-none;
+        counter-set: line;
+        font-size: 18px;
+    }
+
+    .editer > .code-line {
+        counter-increment: line;
+        padding-left: 3rem;
+        position: relative;
+        margin: 1px 0;
+    }
+
+    .editer > .code-line:before {
+        content: counter(line);
+        position: absolute;
+        text-align: right;
+        width: 3rem;
+        display: inline-block;
+        left: -10px;
+    }
+
+    .editer > .code-line:focus {
+        @apply bg-amber-200
+    }
 }
 
 @layer utilities {

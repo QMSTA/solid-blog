@@ -22,7 +22,6 @@ export const MenuGroup = ({label, icon, children}) => {
     onMount(() => {
         const ulTotalHeight = (ulElement.children.length * 44) + 4
         createEffect((e) => {
-            console.log(e.style.height, e.style.disable)
             if (!expand()) {
                 e.style.height = '0px'
                 setTimeout(() => {

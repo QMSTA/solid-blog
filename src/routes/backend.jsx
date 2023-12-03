@@ -23,16 +23,16 @@ export default function Backend() {
         {
             label: '统计',
             path: '/backend',
-            icon: <HomeIcon/>
+            icon: <HomeIcon width={14} height={14}/>
         }, {
             label: '创作',
-            icon: <WritingIcon/>,
+            icon: <WritingIcon width={14} height={14}/>,
             children: [
                 {label: '新的文章', path: '/backend/new/article'},
             ]
         }, {
             label: '管理',
-            icon: <ListIcon/>,
+            icon: <ListIcon width={14} height={14}/>,
             children: [
                 {label: '文章管理', path: '/backend/manage/article'},
                 {label: '分类管理', path: '/backend/manage/article'},
@@ -40,13 +40,13 @@ export default function Backend() {
             ]
         }, {
             label: '用户',
-            icon: <UsersIcon/>,
+            icon: <UsersIcon width={14} height={14}/>,
             children: [
                 {label: '用户列表', path: '/backend/users/list'}
             ]
         }, {
             label: '系统',
-            icon: <SlidersIcon/>,
+            icon: <SlidersIcon width={14} height={14}/>,
             children: [
                 {label: '配置', path: '/backend/system/config'}
             ]
@@ -63,7 +63,9 @@ export default function Backend() {
                     <div class="h-16 w-full bg-[#002140]">
                     </div>
                 </aside>
-                <Outlet/>
+                <main class="w-full p-4 overflow-auto flex">
+                    <Outlet/>
+                </main>
             </div>
         </section>
         <Toaster/>
