@@ -6,6 +6,8 @@ dist
 .netlify
 netlify
 
+public/fonts/*
+
 # Environment
 .env
 .env*.local

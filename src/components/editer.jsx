@@ -1,7 +1,7 @@
 export default function Editer() {
     return (
         <>
-            <div class="editer"
+            <div class="editer text-gray-600"
                  contentEditable={true}
                  onInput={(e) => {
                      if (e.target.children.length <= 0) {

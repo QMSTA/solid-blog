@@ -3,8 +3,23 @@
 @tailwind utilities;
 
 @layer base {
+    @font-face {
+        font-family: 'LXGW';
+        src: url('/public/fonts/woff2/LXGWWenKaiSub-Regular-sub.woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'FiraCode';
+        src: url('/public/fonts/woff2/FiraCode-Regular.woff2');
+        font-weight: normal;
+        font-style: normal;
+    }
+
     :root {
         --theme-default-color: #369;
+        --backend-default-color: #738091;
+        --backend-default-color-shadow: rgba(3, 33, 55, 0.23);
     }
 
     ::-webkit-scrollbar {
@@ -41,7 +56,7 @@
     .editer {
         @apply h-full outline-none;
         counter-set: line;
-        font-size: 18px;
+        font-family: 'FiraCode', sans-serif;
     }
 
     .editer > .code-line {
@@ -63,6 +78,11 @@
     .editer > .code-line:focus {
         @apply bg-amber-200
     }
+
+    .editer-action {
+        @apply inline-flex items-center py-2 mb-3 last:mb-0 w-full justify-center rounded-md transition
+    }
+
 }
 
 @layer utilities {
@@ -86,7 +106,7 @@
     }
 
     .menuitem.selected {
-        background: #738091;
+        background: var(--backend-default-color);
         color: white;
     }
 }
