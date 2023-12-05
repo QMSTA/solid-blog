@@ -53,8 +53,7 @@ export default function Backend() {
         }
     ]
     return (<>
-        <Header scroll={false}/>
-        <section class="pt-16 bg-[#f5f5f5] h-[100vh]">
+        <section class="bg-[#f5f5f5] h-[100vh]">
             <div class="h-full w-full flex flex-row">
                 <aside class="w-[200px] min-w-[200px] max-w-[200px] h-full bg-[#001529] flex flex-col justify-center">
                     <div class="group flex-1 pt-2 overflow-x-hidden overflow-y-auto">
@@ -63,9 +62,12 @@ export default function Backend() {
                     <div class="h-16 w-full bg-[#002140]">
                     </div>
                 </aside>
-                <main class="w-full p-4 overflow-auto flex">
-                    <Outlet/>
-                </main>
+                <div class="w-full overflow-auto">
+                    <Header scroll={false}/>
+                    <main class="w-full p-4 pt-16 mt-4 overflow-auto flex">
+                        <Outlet/>
+                    </main>
+                </div>
             </div>
         </section>
         <Toaster/>
