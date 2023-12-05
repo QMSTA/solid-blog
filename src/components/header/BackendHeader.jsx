@@ -1,12 +1,7 @@
-import {
-    For,
-    onCleanup, onMount,
-} from "solid-js"
-
+import {For, onCleanup, onMount} from "solid-js";
 import {A} from "solid-start";
 
-
-export default function Header({scroll}) {
+export default function BackendHeader() {
     let ScrollElement;
     onMount(() => {
         if (scroll) {
