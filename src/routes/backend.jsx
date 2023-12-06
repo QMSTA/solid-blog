@@ -1,9 +1,9 @@
-import Header from "~/components/Header.jsx";
 import {Outlet} from "solid-start";
-import {MenuItem, MenuGroup, MenuSubItem} from "~/components/menu.jsx";
-import {HomeIcon, ListIcon, SlidersIcon, UsersIcon, WritingIcon} from "~/components/icon/svg.jsx";
+import {MenuItem, MenuGroup, MenuSubItem} from "~/components/nestedMenu.jsx";
+import {ChartIcon, HomeIcon, ListIcon, SlidersIcon, UsersIcon, WritingIcon} from "~/components/icon/svg.jsx";
 import {For} from "solid-js";
 import {Toaster} from "solid-toast";
+import BackendHeader from "~/components/header/BackendHeader.jsx";
 
 const Menu = ({menu}) => {
     return (<>
@@ -23,7 +23,7 @@ export default function Backend() {
         {
             label: '统计',
             path: '/backend',
-            icon: <HomeIcon width={14} height={14}/>
+            icon: <ChartIcon width={14} height={14}/>
         }, {
             label: '创作',
             icon: <WritingIcon width={14} height={14}/>,
@@ -35,8 +35,8 @@ export default function Backend() {
             icon: <ListIcon width={14} height={14}/>,
             children: [
                 {label: '文章管理', path: '/backend/manage/article'},
-                {label: '分类管理', path: '/backend/manage/article'},
-                {label: '标签管理', path: '/backend/manage/article'},
+                {label: '分类管理', path: '/backend/manage/category'},
+                {label: '标签管理', path: '/backend/manage/tags'},
             ]
         }, {
             label: '用户',
@@ -63,7 +63,7 @@ export default function Backend() {
                     </div>
                 </aside>
                 <div class="w-full overflow-auto">
-                    <Header scroll={false}/>
+                    <BackendHeader/>
                     <main class="w-full p-4 pt-16 mt-4 overflow-auto flex">
                         <Outlet/>
                     </main>

@@ -79,7 +79,7 @@
     }
 
     .editer-action {
-        @apply inline-flex items-center py-2 mb-3 last:mb-0 w-full justify-center rounded-md transition
+        @apply inline-flex items-center py-3 mb-3 last:mb-0 w-full justify-center rounded-md transition
     }
 
     .inputbox {
@@ -88,6 +88,46 @@
 
     .inputline {
         @apply outline-none transition border-b hover:border-bdc focus:border-bdc
+    }
+
+    .boxcard {
+        @apply p-3 mb-4 last:mb-0 bg-white
+    }
+
+    .checklabel {
+        position: relative;
+        padding-left: 1.3rem;
+    }
+
+    .checklabel:before {
+        content: "";
+        position: absolute;
+        height: 14px;
+        width: 14px;
+        left: 0.25rem;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        border: 1px solid var(--backend-default-color);
+        border-radius: 4px;
+    }
+
+    .checklabel:after {
+        content: "";
+        position: absolute;
+        left: 0.55rem;
+        top: 0;
+        bottom: 0.1rem;
+        margin: auto 0;
+        height: 9px;
+        width: 5px;
+        border-bottom: 2px solid white; /* 对号的颜色和粗细 */
+        border-right: 2px solid white;
+        transform: rotate(45deg);
+    }
+
+    .checklabel:checked:before {
+        background: #000;
     }
 }
 
@@ -115,4 +155,6 @@
         background: var(--backend-default-color);
         color: white;
     }
+
+
 }

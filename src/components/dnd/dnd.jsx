@@ -32,13 +32,13 @@ export function Dnd(props) {
 export function DragBox(props) {
     const draggable = createDraggable(props.id);
     return (<>
-        <div use:draggable class={props.class}>{props.children}</div>
+        <div use:draggable {...props}></div>
     </>)
 }
 
 export function DropBox(props) {
     const droppable = createDroppable(props.id);
     return (<>
-        <div use:droppable class={props.class}>{props.children}</div>
+        <div use:droppable {...props}></div>
     </>)
 }

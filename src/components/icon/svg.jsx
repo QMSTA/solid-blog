@@ -1,6 +1,6 @@
 export function WritingIcon({height, width}) {
     return (<>
-            <span>
+            <span class="pointer-events-none">
                 <svg xmlns="http://www.w3.org/2000/svg" height={height} width={width} viewBox="0 0 512 512">
                     <path fill="currentColor"
                           d="M278.5 215.6L23 471c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l57-57h68c49.7 0
@@ -14,7 +14,7 @@ export function WritingIcon({height, width}) {
 }
 
 export function UsersIcon({height, width}) {
-    return (<><span>
+    return (<><span class="pointer-events-none">
             <svg xmlns="http://www.w3.org/2000/svg" height={height} width={width} viewBox="0 0 448 512">
                 <path fill="currentColor"
                       d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3
@@ -23,7 +23,7 @@ export function UsersIcon({height, width}) {
 }
 
 export function HomeIcon({height, width}) {
-    return (<><span>
+    return (<><span class="pointer-events-none">
             <svg xmlns="http://www.w3.org/2000/svg" height={height} width={width} viewBox="0 0 576 512">
                 <path fill="currentColor"
                       d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9
@@ -34,8 +34,23 @@ export function HomeIcon({height, width}) {
         </span></>)
 }
 
+export function ChartIcon({height, width}) {
+    return (
+        <>
+            <span class="pointer-events-none">
+                <svg xmlns="http://www.w3.org/2000/svg" height={height} width={width} viewBox="0 0 448 512">
+                    <path fill="currentColor"
+                          d="M160 80c0-26.5 21.5-48 48-48h32c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48 48H208c-26.5
+                          0-48-21.5-48-48V80zM0 272c0-26.5 21.5-48 48-48H80c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48
+                          48H48c-26.5 0-48-21.5-48-48V272zM368 96h32c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48 48H368c-26.5
+                          0-48-21.5-48-48V144c0-26.5 21.5-48 48-48z"/></svg>
+            </span>
+        </>
+    )
+}
+
 export function ListIcon({height, width}) {
-    return (<><span>
+    return (<><span class="pointer-events-none">
             <svg xmlns="http://www.w3.org/2000/svg" height={height} width={width} viewBox="0 0 512 512">
                 <path fill="currentColor"
                       d="M40 48C26.7 48 16 58.7 16 72v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V72c0-13.3-10.7-24-24-24H40zM192
@@ -48,7 +63,7 @@ export function ListIcon({height, width}) {
 }
 
 export function SlidersIcon({height, width}) {
-    return (<><span>
+    return (<><span class="pointer-events-none">
         <svg xmlns="http://www.w3.org/2000/svg" height={height} width={width} viewBox="0 0 512 512">
             <path fill="currentColor"
                   d="M0 416c0 17.7 14.3 32 32 32l54.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48L480 448c17.7
@@ -64,7 +79,7 @@ export function SlidersIcon({height, width}) {
 
 export function CheckIcon({height, width}) {
     return (<>
-            <span>
+            <span class="pointer-events-none">
                 <svg xmlns="http://www.w3.org/2000/svg" height={height} width={width} viewBox="0 0 448 512">
                     <path fill="currentColor"
                           d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 
@@ -77,11 +92,25 @@ export function CheckIcon({height, width}) {
 export function BookmarkIcon({height, width}) {
     return (
         <>
-            <span>
+            <span class="pointer-events-none">
                 <svg xmlns="http://www.w3.org/2000/svg" height={height} width={width} viewBox="0 0 384 512">
                     <path fill="currentColor"
                           d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1
                           2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"/></svg>
+            </span>
+        </>
+    )
+}
+
+export function AddIcon({height, width}) {
+    return (
+        <>
+            <span class="pointer-events-none">
+                <svg xmlns="http://www.w3.org/2000/svg" height={height} width={width} viewBox="0 0 448 512">
+                    <path fill="currentColor"
+                          d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32
+                          32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3
+                          32-32s-14.3-32-32-32H256V80z"/></svg>
             </span>
         </>
     )
