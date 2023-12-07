@@ -1,14 +1,12 @@
-import {AddIcon, BookmarkIcon, CheckIcon, ListIcon, WritingIcon} from "~/components/icon/svg.jsx";
+import {AddIcon, BookmarkIcon, CheckIcon, ListIcon} from "~/components/icon/svg.jsx";
 import Editer from "~/components/editer.jsx";
-import {successNotify, normalNotify} from "~/utils/notify.js";
-import Overlays from "~/components/overlays.jsx";
+import {successNotify} from "~/utils/notify.js";
 import {For, Show} from "solid-js";
 import {Dnd, DragBox, DropBox} from "~/components/dnd/dnd.jsx";
 
 export default function () {
-    return (<>
+    return (<div class="flex w-full">
         <div class="flex-1 h-fit text-gray-500 select-none">
-            <SubHeader/>
             <EditTitle/>
             <EditContent/>
             <EditSummary/>
@@ -18,17 +16,8 @@ export default function () {
             <SelectCategory/>
             <SelectTags/>
         </div>
-        <Overlays/>
-    </>)
+    </div>)
 }
-
-const SubHeader = () => (<>
-    {/*子页面头部*/}
-    <header class="border-b boxcard text-[1rem]/[2.5rem] flex items-center">
-        <WritingIcon width={14} height={14}/>
-        <h2 class="ml-2">新的文章</h2>
-    </header>
-</>)
 
 const EditTitle = () => (<>
     {/*编辑文章标题*/}
@@ -76,52 +65,35 @@ const EditDo = () => (<>
 
 
 const SelectCategory = () => {
-    const data = [
-        {
-            id: 1,
-            name: "test2",
-            displayName: "测试2",
-            sub: [
-                {id: 2, name: "test222", displayName: "测试22"},
-                {
-                    id: 3, name: "test22", displayName: "测试22",
-                    sub: [
-                        {
-                            id: 10,
-                            name: "test10",
-                            displayName: "测试10",
-                        }
-                    ]
-                },
-            ]
-        }, {
-            id: 0,
-            name: "test",
-            displayName: "测试",
-        },
-    ]
+    const data = [{
+        id: 1, name: "test2", displayName: "测试2", sub: [{id: 2, name: "test222", displayName: "测试22"}, {
+            id: 3, name: "test22", displayName: "测试22", sub: [{
+                id: 10, name: "test10", displayName: "测试10",
+            }]
+        },]
+    }, {
+        id: 0, name: "test", displayName: "测试",
+    },]
     const CategoryItem = ({tree, level}) => {
         return (<>
             <For each={tree}>
-                {(item) =>
-                    <div class="peer-[.unexpand]:h-0 h-auto overflow-hidden" style={{"padding-left": `${(level - 1) * 10}px`}}>
-                        <div class="peer relative">
-                            <input class="peer hidden" type="radio" name="category" value={item.name} id={`cate-${item.id}`}/>
-                            <label class="checklabel before:transition300 cursor-pointer mr-4
+                {(item) => <div class="peer-[.unexpand]:h-0 h-auto overflow-hidden" style={{"padding-left": `${(level - 1) * 10}px`}}>
+                    <div class="peer relative">
+                        <input class="peer hidden" type="radio" name="category" value={item.name} id={`cate-${item.id}`}/>
+                        <label class="checklabel before:transition300 cursor-pointer mr-4
                                           peer-checked:before:bg-bdc peer-checked:before:ring-2 peer-checked:before:ring-bdcs"
-                                   for={`cate-${item.id}`}>
-                                <span>{item.displayName}</span>
-                            </label>
-                            <Show when={item.sub}>
-                                <button type="button" class="absolute inset-y-0 my-auto z-10"
-                                        onClick={(e) => {
-                                            e.target.parentNode.classList.toggle('unexpand')
-                                        }}><ListIcon width={14} height={14}/></button>
-                            </Show>
-                        </div>
-                        <Show when={item.sub}><CategoryItem tree={item.sub} level={level + 1}/></Show>
+                               for={`cate-${item.id}`}>
+                            <span>{item.displayName}</span>
+                        </label>
+                        <Show when={item.sub}>
+                            <button type="button" class="absolute inset-y-0 my-auto z-10"
+                                    onClick={(e) => {
+                                        e.target.parentNode.classList.toggle('unexpand')
+                                    }}><ListIcon width={14} height={14}/></button>
+                        </Show>
                     </div>
-                }
+                    <Show when={item.sub}><CategoryItem tree={item.sub} level={level + 1}/></Show>
+                </div>}
             </For>
         </>)
     }
@@ -143,37 +115,21 @@ const SelectCategory = () => {
 }
 
 const SelectTags = () => {
-    const tags = [
-        {
-            id: 0,
-            name: "test",
-            displayName: "测试",
-        }, {
-            id: 1,
-            name: "test1",
-            displayName: "测试1",
-        }, {
-            id: 2,
-            name: "test2",
-            displayName: "测试2",
-        }, {
-            id: 3,
-            name: "test3",
-            displayName: "测试3",
-        }, {
-            id: 4,
-            name: "test4",
-            displayName: "测试4",
-        }, {
-            id: 5,
-            name: "test5",
-            displayName: "测试5",
-        }, {
-            id: 6,
-            name: "test6",
-            displayName: "测试6",
-        },
-    ]
+    const tags = [{
+        id: 0, name: "test", displayName: "测试",
+    }, {
+        id: 1, name: "test1", displayName: "测试1",
+    }, {
+        id: 2, name: "test2", displayName: "测试2",
+    }, {
+        id: 3, name: "test3", displayName: "测试3",
+    }, {
+        id: 4, name: "test4", displayName: "测试4",
+    }, {
+        id: 5, name: "test5", displayName: "测试5",
+    }, {
+        id: 6, name: "test6", displayName: "测试6",
+    },]
     return (<>
         {/*选择标签*/}
         <div class="boxcard pt-[60px] relative rounded-md text-gray-500">

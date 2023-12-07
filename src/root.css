@@ -5,7 +5,7 @@
 @layer base {
     @font-face {
         font-family: 'LXGW';
-        src: url('/public/fonts/woff2/LXGWWenKaiSub-Regular-sub.woff2');
+        src: url('/public/fonts/ttf/LXGWWenKai-Regular.ttf');
         font-weight: normal;
         font-style: normal;
     }
@@ -14,6 +14,11 @@
         src: url('/public/fonts/woff2/FiraCode-Regular.woff2');
         font-weight: normal;
         font-style: normal;
+    }
+
+    button,
+    input {
+        outline: none;
     }
 
     :root {
@@ -128,6 +133,22 @@
 
     .checklabel:checked:before {
         background: #000;
+    }
+
+    table {
+        width: 150%;
+        text-align: center;
+    }
+
+    table tr:hover th,
+    table tr:hover td {
+        @apply bg-gray-50
+    }
+
+    table th,
+    table td {
+        padding: 16px;
+        background: #fff;
     }
 }
 

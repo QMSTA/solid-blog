@@ -1,9 +1,11 @@
 import {Outlet} from "solid-start";
 import {MenuItem, MenuGroup, MenuSubItem} from "~/components/nestedMenu.jsx";
-import {ChartIcon, HomeIcon, ListIcon, SlidersIcon, UsersIcon, WritingIcon} from "~/components/icon/svg.jsx";
+import {ChartIcon, ListIcon, SlidersIcon, UsersIcon, WritingIcon} from "~/components/icon/svg.jsx";
 import {For} from "solid-js";
 import {Toaster} from "solid-toast";
 import BackendHeader from "~/components/header/BackendHeader.jsx";
+import {Transition} from "solid-transition-group";
+import TransitionBox from "~/components/transition.jsx";
 
 const Menu = ({menu}) => {
     return (<>
@@ -65,7 +67,9 @@ export default function Backend() {
                 <div class="w-full overflow-auto">
                     <BackendHeader/>
                     <main class="w-full p-4 pt-16 mt-4 overflow-auto flex">
-                        <Outlet/>
+                        <TransitionBox>
+                            <Outlet/>
+                        </TransitionBox>
                     </main>
                 </div>
             </div>
