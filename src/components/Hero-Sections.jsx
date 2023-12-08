@@ -8,15 +8,9 @@ export default function HeroSections() {
         const getOffSet = createMemo(() => {
             let _offset = 200;
             let windowHeight = winH();
-            if (windowHeight > 500) {
-                _offset = 150;
-            }
-            if (windowHeight > 680) {
-                _offset = 100
-            }
-            if (windowHeight > 830) {
-                _offset = 50;
-            }
+            if (windowHeight > 500) _offset = 150;
+            if (windowHeight > 680) _offset = 100;
+            if (windowHeight > 830) _offset = 50;
             return _offset;
         })
         const onScroll = () => {
@@ -35,13 +29,11 @@ export default function HeroSections() {
             window.removeEventListener("resize", onResize)
         })
     })
-    return (
-        <>
-            <section id="home"
-                     class="h-[100vh]
+    return (<>
+        <section id="home"
+                 class="h-[100vh]
                      bg-[url('/public/image/clouds-2329680.jpg')] bg-cover"
-                     style={{'background-position-y': backgroundPositionY() + 'px'}}>
-            </section>
-        </>
-    )
+                 style={{'background-position-y': backgroundPositionY() + 'px'}}>
+        </section>
+    </>)
 }
