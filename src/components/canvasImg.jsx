@@ -28,8 +28,6 @@ export default function CanvasImg(props) {
         }
     })
     return (<>
-        <div class="w-fit mx-auto -mb-[40px]">
             <canvas {...props} ref={canvas}/>
-        </div>
     </>)
 }

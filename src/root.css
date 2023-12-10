@@ -24,6 +24,7 @@
     :root {
         --theme-default-color: #369;
         --backend-default-color: #738091;
+        --theme-default-color-2: #a00000;
         --backend-default-color-shadow: rgba(3, 33, 55, 0.23);
     }
 

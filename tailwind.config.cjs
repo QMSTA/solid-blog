@@ -8,7 +8,10 @@ module.exports = {
                 lxgw: ['LXGW'],
             },
             colors: {
-                tdc: 'var(--theme-default-color)', bdc: 'var(--backend-default-color)', bdcs: 'var(--backend-default-color-shadow)'
+                tdc: 'var(--theme-default-color)',
+                tdc2: 'var(--theme-default-color-2)',
+                bdc: 'var(--backend-default-color)',
+                bdcs: 'var(--backend-default-color-shadow)'
             },
             keyframes: {
                 rain: {

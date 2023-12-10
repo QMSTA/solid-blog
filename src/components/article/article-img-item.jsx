@@ -6,9 +6,9 @@ export default function ArticleImgItem() {
     return (
         <>
             <div class="py-4 flex flex-row items-center border-b border-gray-300">
-                <div class="h-[240px] w-[280px] mr-10">
+                <div class="h-[240px] w-[280px] overflow-hidden mr-10 rounded-[1rem]">
                     <A href="/">
-                        <img class="w-full h-full object-cover rounded-[1rem]" src="/public/image/wallhaven-yx21zx.jpg" alt=""/>
+                        <img class="transition300 w-full h-full object-cover hover:opacity-95" src="/public/image/wallhaven-yx21zx.jpg" alt=""/>
                     </A>
                 </div>
                 <div class="flex-1">
