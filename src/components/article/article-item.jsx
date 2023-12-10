@@ -9,11 +9,11 @@ export default function ArticleItem() {
                 <div>
                     <div class="transition my-4 text-[1.5rem] text-gray-600">
                         <A class="hover:underline w-fit block" href="/">
-                            <h2 class="w-fit">这是一段测试标题这是一段测试标题这是一段测试标题这是一段测试标题这是一段测试标题这是一段测试标题这是一段测试标题</h2>
+                            <h2 class="w-fit">这是一段测试标题这是一段测试标题这是一段测试标题这是一段测试标题这是一</h2>
                         </A>
                     </div>
                     <div class="my-4 text-gray-600">
-                        <p>这是一段测试文本这是一段测试文本这是一段测试文本这是一段测试文本这是一段测试文本这是一段测试文本这是一段测试文本这是一段测试文本这是一段测试文本这是一段测试文本这是一段测试文本这是一段测试文本这是一段测试文本这是一段测试文本这是一段测试文本这是一段测试文本这是一段测试文本这是一段测试文本这是一段测试文本这是一段测试文本这是一段测试文本这是一段测试文本这是一段测试文本这是一段测试文本</p>
+                        <p>这是一段测试文本这是一段测试文本这是一段测试文本这是一段测试文本这是一段测试文本这是一段测试文本这是一段测试文</p>
                     </div>
                     <div class="pb-2 flex flex-row items-center justify-between">
                         <div class="flex flex-row p-3 text-gray-400">

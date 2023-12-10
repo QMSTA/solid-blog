@@ -8,21 +8,11 @@ import AsideRecommend from "~/components/aside-tools/recommend.jsx";
 import AsideCategory from "~/components/aside-tools/category.jsx";
 import AsideTags from "~/components/aside-tools/tags.jsx";
 import AsideFooter from "~/components/aside-tools/footer.jsx";
+import Sidebar from "~/components/sidebar.jsx";
 
 
 export default function Index() {
-    let aside;
-    onMount(() => {
-        const setAside = () => {
-            const top = window.innerHeight - aside.clientHeight
-            aside.style.top = `${top}px`
-        }
-        setAside()
-        window.addEventListener("resize", setAside)
-        onCleanup(() => {
-            window.removeEventListener("resize", setAside)
-        })
-    })
+
     return (<>
         <Header/>
         <HeroSections/>
@@ -33,14 +23,9 @@ export default function Index() {
                     <ArticleImgItem/>
                 </>)}</For>
             </main>
-            <aside ref={aside} class="w-[280px] h-fit px-4 sticky">
-                <Profile/>
-                <AsideRecommend data={['test']}/>
-                <AsideCategory data={['test']}/>
-                <AsideTags data={['3D', 'text', 'game', '测试']}/>
-                <AsideFooter/>
-            </aside>
+            <Sidebar/>
         </section>
+
     </>);
 }
 
