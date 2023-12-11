@@ -5,7 +5,7 @@ import {For} from "solid-js";
 export default function ArticleItem() {
     return (
         <>
-            <article class="flex items-center py-4 border-b border-gray-300">
+            <article class="flex items-center pt-4 border-b border-gray-300">
                 <div class="flex-1">
                     <div class="transition my-4 text-[1.5rem] text-gray-600">
                         <A class="hover:underline w-fit block" href="/">

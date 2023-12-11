@@ -19,9 +19,7 @@ export default function Home() {
             <main class="font-lxgw flex-1 mr-8 pb-8">
                 <For each={[1]}>{(item) => (<>
                     <ArticleItem/>
-                    <ArticleImgItem/>
                     <ArticleItemStyle2 data={['']}/>
-                    <ArticleImgItemStyle2 data={['']}/>
                 </>)}</For>
             </main>
             <Sidebar/>

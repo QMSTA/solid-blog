@@ -29,7 +29,7 @@ export default function ArticleItemStyle2({data}) {
                         </div>
                     </div>
                 </header>
-                <Show when={data.img}>
+                <Show when={data}>
                     <div>
                         <A href="/">
                             <img class="transition300 w-full h-full object-cover hover:opacity-95" src="/public/image/wallhaven-yx21zx.jpg" alt=""/>
