@@ -32,7 +32,7 @@ export default function HeroSections() {
     return (<>
         <section id="home"
                  class="h-[100vh]
-                     bg-[url('/public/image/clouds-2329680.jpg')] bg-cover"
+                     bg-[url('/public/image/clouds-2329680.jpg')] bg-cover bg-no-repeat"
                  style={{'background-position-y': backgroundPositionY() + 'px'}}>
         </section>
     </>)

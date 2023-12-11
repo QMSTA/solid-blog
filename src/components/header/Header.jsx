@@ -6,18 +6,22 @@ import {
 import {A} from "solid-start";
 
 
-export default function Header() {
+export default function Header({scroll}) {
     let ScrollElement;
     onMount(() => {
-        const onScroll = () => {
-            if (window.scrollY > 240) {
-                ScrollElement.classList.add("scrolled")
-            } else {
-                ScrollElement.classList.remove("scrolled")
+        if (scroll) {
+            const onScroll = () => {
+                if (window.scrollY > 240) {
+                    ScrollElement.classList.add("scrolled")
+                } else {
+                    ScrollElement.classList.remove("scrolled")
+                }
             }
+            window.addEventListener("scroll", onScroll)
+            onCleanup(() => window.removeEventListener("scroll", onScroll))
+        } else {
+            ScrollElement.classList.add("scrolled")
         }
-        window.addEventListener("scroll", onScroll)
-        onCleanup(() => window.removeEventListener("scroll", onScroll))
     })
     return (<>
         <nav ref={ScrollElement}

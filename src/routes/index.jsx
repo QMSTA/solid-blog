@@ -14,7 +14,7 @@ import Sidebar from "~/components/sidebar.jsx";
 export default function Index() {
 
     return (<>
-        <Header/>
+        <Header scroll={true}/>
         <HeroSections/>
         <section class="flex flex-row mx-auto pt-12 max-w-5xl">
             <main class="font-lxgw flex-1 mr-8 pb-8">
@@ -25,7 +25,6 @@ export default function Index() {
             </main>
             <Sidebar/>
         </section>
-
     </>);
 }
 
