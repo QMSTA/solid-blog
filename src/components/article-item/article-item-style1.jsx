@@ -2,7 +2,7 @@ import {CalendarIcon} from "~/components/icon/svg.jsx";
 import {A} from "solid-start";
 import {For} from "solid-js";
 
-export default function ArticleItem() {
+export default function ArticleItemStyle1() {
     return (
         <>
             <article class="flex items-center pt-4 border-b border-gray-300">

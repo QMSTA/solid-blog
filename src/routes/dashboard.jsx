@@ -1,10 +1,8 @@
 import {Outlet} from "solid-start";
-import {MenuItem, MenuGroup, MenuSubItem} from "~/components/nestedMenu.jsx";
+import {MenuItem, MenuGroup, MenuSubItem} from "~/components/menu/DashboardMenu.jsx";
 import {ChartIcon, ListIcon, SlidersIcon, UsersIcon, WritingIcon} from "~/components/icon/svg.jsx";
 import {For} from "solid-js";
 import {Toaster} from "solid-toast";
-import BackendHeader from "~/components/header/BackendHeader.jsx";
-import {Transition} from "solid-transition-group";
 import TransitionBox from "~/components/transition.jsx";
 
 const Menu = ({menu}) => {
@@ -20,37 +18,37 @@ const Menu = ({menu}) => {
         </ul>
     </>)
 }
-export default function Backend() {
+export default function Dashboard() {
     const menuTree = [
         {
             label: '统计',
-            path: '/backend',
+            path: '/dashboard',
             icon: <ChartIcon width={14} height={14}/>
         }, {
             label: '创作',
             icon: <WritingIcon width={14} height={14}/>,
             children: [
-                {label: '新的文章', path: '/backend/new/article'},
+                {label: '新的文章', path: '/dashboard/new/article'},
             ]
         }, {
             label: '管理',
             icon: <ListIcon width={14} height={14}/>,
             children: [
-                {label: '文章管理', path: '/backend/manage/article'},
-                {label: '分类管理', path: '/backend/manage/category'},
-                {label: '标签管理', path: '/backend/manage/tags'},
+                {label: '文章管理', path: '/dashboard/manage/article'},
+                {label: '分类管理', path: '/dashboard/manage/category'},
+                {label: '标签管理', path: '/dashboard/manage/tags'},
             ]
         }, {
             label: '用户',
             icon: <UsersIcon width={14} height={14}/>,
             children: [
-                {label: '用户列表', path: '/backend/users/list'}
+                {label: '用户列表', path: '/dashboard/users/list'}
             ]
         }, {
             label: '系统',
             icon: <SlidersIcon width={14} height={14}/>,
             children: [
-                {label: '配置', path: '/backend/system/config'}
+                {label: '配置', path: '/dashboard/system/config'}
             ]
         }
     ]
@@ -65,7 +63,7 @@ export default function Backend() {
                     </div>
                 </aside>
                 <div class="w-full overflow-auto">
-                    <BackendHeader/>
+
                     <main class="w-full p-4 pt-16 mt-4 overflow-auto flex">
                         <TransitionBox>
                             <Outlet/>

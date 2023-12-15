@@ -89,8 +89,8 @@ const DataTable = ({data}) => {
             <div class="px-5 py-4 flex flex-row leading-8">
                 <h3 class="flex-1 text-[16px]">文章列表</h3>
                 <div class="flex-1 flex justify-end">
-                    <A href="/backend/new/article"
-                       class="inline-block h-full w-16 rounded-md bg-bdc ring-2 ring-bdcs
+                    <A href="/"
+                       class="h-full w-16 rounded-md bg-bdc ring-2 ring-bdcs
                               hover:opacity-80 text-white flex items-center justify-center">新建
                     </A>
                 </div>

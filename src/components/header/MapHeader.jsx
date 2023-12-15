@@ -6,7 +6,7 @@ import {
 import {A} from "solid-start";
 
 
-export default function Header({scroll}) {
+export default function MapHeader({scroll}) {
     let ScrollElement;
     onMount(() => {
         if (scroll) {

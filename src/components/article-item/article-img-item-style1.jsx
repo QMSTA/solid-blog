@@ -2,7 +2,7 @@ import {BookmarkIcon, CalendarIcon} from "~/components/icon/svg.jsx";
 import {For} from "solid-js";
 import {A} from "solid-start";
 
-export default function ArticleImgItem() {
+export default function ArticleImgItemStyle1() {
     return (
         <>
             <article class="py-4 flex flex-row items-center border-b border-gray-300">

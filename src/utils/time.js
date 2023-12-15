@@ -1,6 +1,7 @@
 export function timestampToTimeString(timestamp) {
     const now = Math.floor(Date.now() / 1000);
     const timeDiff = now - timestamp;
+
     if (timeDiff < 60) {
         return "刚刚";
     } else if (timeDiff < 3600) {

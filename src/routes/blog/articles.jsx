@@ -1,9 +1,9 @@
 import {Outlet} from "solid-start";
-import Header from "~/components/header/Header.jsx";
+import MapHeader from "~/components/header/MapHeader.jsx";
 
 export default function Articles() {
     return (<>
-        <Header scroll={false}/>
+        <MapHeader scroll={false}/>
         <div class="pt-28 mx-auto max-w-4xl font-lxgw">
             <Outlet/>
         </div>
